@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -37,7 +38,7 @@
                             <option value="{{ $emps->id }}">ชื่อ - นามสกุล : {{ $emps->personal_name }} ประเภท : {{ $emps->personal_type }} กลุ่ม : {{ $emps->personal_sub }}</option>
                             @endforeach
                         </select>
-                        <br>
+                        <hr>
                         <div class="table-responsive">
                         <table class="table table-bordered border-primary mb-0 text-center">
                             <thead class="table-light">
@@ -109,7 +110,12 @@
 @endsection
 @push('scriptjs')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
+    $(document).ready(function() {
+    $('#personalSelect').select2();
+});
     document.addEventListener("DOMContentLoaded", function () {
         const inputs = document.querySelectorAll(".joint-score");
         const totalScoreSpan = document.getElementById("totalScore");

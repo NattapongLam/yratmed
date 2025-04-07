@@ -929,7 +929,7 @@
     // สำหรับแต่ละกราฟที่มีอยู่ใน charts
     @foreach($charts as $chart)
       // ตรวจสอบว่ากราฟที่ได้ตรงกับ personal_id ที่อยู่ใน emp1 หรือไม่
-      @if(collect($emp1)->pluck('id')->contains($chart['personalId']))
+      @if(collect($emp2)->pluck('id')->contains($chart['personalId']))
         var ctx{{ $chart['personalId'] }} = document.getElementById('chart2-{{ $chart['personalId'] }}').getContext('2d');
         new Chart(ctx{{ $chart['personalId'] }}, {
           type: 'line',
@@ -965,7 +965,7 @@
     // สำหรับแต่ละกราฟที่มีอยู่ใน charts
     @foreach($charts as $chart)
       // ตรวจสอบว่ากราฟที่ได้ตรงกับ personal_id ที่อยู่ใน emp1 หรือไม่
-      @if(collect($emp1)->pluck('id')->contains($chart['personalId']))
+      @if(collect($emp3)->pluck('id')->contains($chart['personalId']))
         var ctx{{ $chart['personalId'] }} = document.getElementById('chart3-{{ $chart['personalId'] }}').getContext('2d');
         new Chart(ctx{{ $chart['personalId'] }}, {
           type: 'line',
@@ -1001,7 +1001,7 @@
     // สำหรับแต่ละกราฟที่มีอยู่ใน charts
     @foreach($charts as $chart)
       // ตรวจสอบว่ากราฟที่ได้ตรงกับ personal_id ที่อยู่ใน emp1 หรือไม่
-      @if(collect($emp1)->pluck('id')->contains($chart['personalId']))
+      @if(collect($emp4)->pluck('id')->contains($chart['personalId']))
         var ctx{{ $chart['personalId'] }} = document.getElementById('chart4-{{ $chart['personalId'] }}').getContext('2d');
         new Chart(ctx{{ $chart['personalId'] }}, {
           type: 'line',
@@ -1037,7 +1037,7 @@
     // สำหรับแต่ละกราฟที่มีอยู่ใน charts
     @foreach($charts as $chart)
       // ตรวจสอบว่ากราฟที่ได้ตรงกับ personal_id ที่อยู่ใน emp1 หรือไม่
-      @if(collect($emp1)->pluck('id')->contains($chart['personalId']))
+      @if(collect($emp5)->pluck('id')->contains($chart['personalId']))
         var ctx{{ $chart['personalId'] }} = document.getElementById('chart5-{{ $chart['personalId'] }}').getContext('2d');
         new Chart(ctx{{ $chart['personalId'] }}, {
           type: 'line',
@@ -1073,7 +1073,7 @@
     // สำหรับแต่ละกราฟที่มีอยู่ใน charts
     @foreach($charts as $chart)
       // ตรวจสอบว่ากราฟที่ได้ตรงกับ personal_id ที่อยู่ใน emp1 หรือไม่
-      @if(collect($emp1)->pluck('id')->contains($chart['personalId']))
+      @if(collect($emp6)->pluck('id')->contains($chart['personalId']))
         var ctx{{ $chart['personalId'] }} = document.getElementById('chart6-{{ $chart['personalId'] }}').getContext('2d');
         new Chart(ctx{{ $chart['personalId'] }}, {
           type: 'line',
@@ -1109,7 +1109,7 @@
     // สำหรับแต่ละกราฟที่มีอยู่ใน charts
     @foreach($charts as $chart)
       // ตรวจสอบว่ากราฟที่ได้ตรงกับ personal_id ที่อยู่ใน emp1 หรือไม่
-      @if(collect($emp1)->pluck('id')->contains($chart['personalId']))
+      @if(collect($emp7)->pluck('id')->contains($chart['personalId']))
         var ctx{{ $chart['personalId'] }} = document.getElementById('chart7-{{ $chart['personalId'] }}').getContext('2d');
         new Chart(ctx{{ $chart['personalId'] }}, {
           type: 'line',

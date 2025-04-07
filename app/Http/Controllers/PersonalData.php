@@ -25,7 +25,7 @@ class PersonalData extends Controller
      */
     public function index()
     {
-        $emp = PersonalDataList::where('personal_flag',true)->orderby('id','asc')->get();
+        $emp = PersonalDataList::where('personal_flag',true)->orderby('personal_type','asc')->get();
         return view('personals.personal-data-list',compact('emp'));
     }
 

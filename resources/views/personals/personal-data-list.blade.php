@@ -29,11 +29,11 @@
                         <thead class="table-light">
                             <tr>
                                 <th></th>
-                                <th>ชื่อ - นามสกุล</th>
-                                <th>เพศ</th>
-                                <th>ประเภท</th>
-                                <th>หน่วยย่อย</th>
-                                <th>แก้ไข</th>
+                                <th class="text-center">ชื่อ - นามสกุล</th>
+                                <th class="text-center">เพศ</th>
+                                <th class="text-center">ประเภท</th>
+                                <th class="text-center">หน่วยย่อย</th>
+                                <th class="text-center">แก้ไข</th>
                             </tr>
                         </thead>
                         <tbody>
