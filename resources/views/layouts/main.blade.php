@@ -14,7 +14,12 @@
         <link href="{{URL::asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{URL::asset('assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
-        <link href="{{ URL::asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- DataTables -->
+        <link href="{{URL::asset('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{URL::asset('assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css">
+        <!-- Responsive datatable examples -->
+        <link href="{{URL::asset('assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css')}}" rel="stylesheet" type="text/css">
         @livewireStyles
     </head>
     <body data-sidebar="dark" data-layout-mode="light">
@@ -55,6 +60,18 @@
         <script src="{{URL::asset('/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
         <!-- Sweet alert init js-->
         <script src="{{URL::asset('/assets/js/pages/sweet-alerts.init.js') }}"></script>
+        <!-- Buttons examples -->
+        <script src="{{URL::asset('assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/jszip/jszip.min.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/pdfmake/build/pdfmake.min.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/pdfmake/build/vfs_fonts.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
+        <!-- Responsive examples -->
+        <script src="{{URL::asset('assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+        <script src="{{URL::asset('assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')}}"></script>
         @livewireScripts
         @stack('scriptjs')
     </body>

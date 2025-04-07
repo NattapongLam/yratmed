@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('content')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -24,7 +25,7 @@
                 </h4><hr>
                 <div class="row">
                     <div class="table-responsive">
-                    <table class="table table-bordered border-primary mb-0 text-center">
+                        <table id="empTable" class="table table-bordered border-primary mb-0 text-center">
                         <thead class="table-light">
                             <tr>
                                 <th></th>
@@ -55,7 +56,8 @@
                                     <td>{{$item->personal_type }}</td>
                                     <td>
                                         {{$item->personal_sub }}<br>
-                                        {{Carbon\Carbon::parse($item->updated_at)->format('d-m-Y H:i')}}
+                                        {{Carbon\Carbon::parse($item->updated_at)->format('d-m-Y H:i')}}<br>
+                                        (ID:{{$item->id }})
                                     </td>
                                     <td>
                                         <a href="{{route('personal.edit',$item->id)}}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
@@ -72,4 +74,26 @@
 </div>         
 @endsection
 @push('scriptjs')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+      $(document).ready(function () {
+        $('#empTable').DataTable({
+            language: {
+                "search": "ค้นหา:",
+                "lengthMenu": "แสดง _MENU_ รายการต่อหน้า",
+                "zeroRecords": "ไม่พบข้อมูลที่ค้นหา",
+                "info": "แสดงหน้า _PAGE_ จาก _PAGES_",
+                "infoEmpty": "ไม่มีข้อมูล",
+                "infoFiltered": "(กรองจากทั้งหมด _MAX_ รายการ)",
+                "paginate": {
+                    "first": "หน้าแรก",
+                    "last": "หน้าสุดท้าย",
+                    "next": "ถัดไป",
+                    "previous": "ก่อนหน้า"
+                },
+            }
+        });
+    });
+</script>
 @endpush
