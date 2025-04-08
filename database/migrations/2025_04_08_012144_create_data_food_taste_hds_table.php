@@ -25,6 +25,8 @@ class CreateDataFoodTasteHdsTable extends Migration
             $table->string('remark')->nullable();
             $table->string('person_at');
             $table->boolean('flag');
+            $table->string('foodtaste_type');
+            $table->date('foodtaste_date');
             $table->timestamps();
         });
     }

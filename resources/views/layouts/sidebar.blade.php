@@ -97,7 +97,7 @@
                         <span key="t-authentication">Physical</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#" key="t-login">Record</a></li>
+                        <li><a href="{{route('physical.index')}}" key="t-login">Record</a></li>
                     </ul>
                 </li>
                 @endcan

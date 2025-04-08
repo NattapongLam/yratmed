@@ -170,6 +170,11 @@
                             สุขภาพจิต
                         </a>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#archive5" role="tab" aria-selected="false" tabindex="-1">
+                            กายภาพบำบัด
+                        </a>
+                    </li>
                 </ul>
                 <div class="tab-content p-4">
                     <div class="tab-pane active show" id="archive1" role="tabpanel">
@@ -371,6 +376,32 @@
                         $data = $healt->pluck('total');
                     @endphp
                     <canvas id="barChart" width="400" height="200"></canvas>
+                </div>
+                <div class="tab-pane" id="archive5" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="table table-bordered border-primary text-center">
+                            <thead class="table-light">
+                               <tr>
+                                    <th>วันที่ให้บริการ</th>
+                                    <th>การวินิจฉัยทางกายภาพบำบัด</th>
+                                    <th>การรักษาทางกายภาพบำบัด</th>
+                                    <th>ผลการรักษา</th>
+                                    <th>หมายเหตุ ข้อจำกัดหรืออุปสรรค</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($physical as $item)
+                                    <tr>
+                                        <td>{{Carbon\Carbon::parse($item->physical_date)->format('d-m-Y')}}</td>
+                                        <td>{{$item->physical_diagnosis}}</td>
+                                        <td>{{$item->physical_treatment}}</td>
+                                        <td>{{$item->physical_results}}</td>
+                                        <td>{{$item->physical_remark}}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

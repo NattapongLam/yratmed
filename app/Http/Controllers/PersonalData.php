@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\PersonalSubList;
+use App\Models\DataPhysicalList;
 use App\Models\PersonalDataList;
 use App\Models\PersonalTypeList;
 use Illuminate\Support\Facades\DB;
@@ -134,7 +135,8 @@ class PersonalData extends Controller
         ->where('flag', true)
         ->orderby('created_at','asc')
         ->get();
-        return view('personals.personal-data-edit',compact('typ','sub','emp','joint','history','subs','labs','healt'));
+        $physical = DataPhysicalList::where('flag', true)->where('personal_id', $id)->orderby('physical_date','asc')->get();
+        return view('personals.personal-data-edit',compact('typ','sub','emp','joint','history','subs','labs','healt','physical'));
     }
 
     /**

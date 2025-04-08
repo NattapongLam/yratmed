@@ -82,7 +82,8 @@ Route::group([
 Route::group([
     'middleware' =>  ['auth','permission:Physical']
 ],function(){
-    
+    Route::resource('/physical' , App\Http\Controllers\DataPhysical::class);
+    Route::delete('/physical/{id}/cancel', [App\Http\Controllers\DataPhysical::class, 'cancel'])->name('physical.cancel');
 });
 
 Route::group([
