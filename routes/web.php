@@ -93,3 +93,4 @@ Route::group([
 
 Route::resource('/ostrc' , App\Http\Controllers\DataOstrc::class);
 Route::resource('/health' , App\Http\Controllers\DataHealth::class);
+Route::resource('/foodtaste' , App\Http\Controllers\DataFoodtaste::class);

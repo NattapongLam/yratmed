@@ -118,7 +118,7 @@
                     <i class="bx bx-plus-medical"></i>
                     <span key="t-authentication">แบบประเมิน OSTRC</span>
                 </a>
-                <a href="#" class="waves-effect">
+                <a href="{{route('foodtaste.index')}}" class="waves-effect">
                     <i class="bx bx-restaurant"></i>
                     <span key="t-authentication">แบบประเมินอาหาร</span>
                 </a>

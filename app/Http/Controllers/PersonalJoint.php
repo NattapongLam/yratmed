@@ -111,7 +111,7 @@ class PersonalJoint extends Controller
                     'flag' => true,
                     'remark' => $request->joint_remark[$key],
                     'person_at' => Auth::user()->name,
-                    'created_at' => '2025-04-01',
+                    'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now()
                 ];
                 DB::table('personal_joints_lists')->insert($data);
